@@ -12,7 +12,7 @@ mongoose.connect(
     process.env.MONGO_ATLAS_PW + 
     '@node-rest-shard-00-00-f8iyk.mongodb.net:27017,node-rest-shard-00-01-f8iyk.mongodb.net:27017,node-rest-shard-00-02-f8iyk.mongodb.net:27017/test?ssl=true&replicaSet=node-rest-shard-0&authSource=admin&retryWrites=true',
     {
-        //useMongoClient: true
+        
         useNewUrlParser: true
     }
 );
