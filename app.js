@@ -7,14 +7,18 @@ const mongoose = require('mongoose');
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
 
-mongoose.connect(
+/*mongoose.connect(
     'mongodb://ondarcz:' + 
     process.env.MONGO_ATLAS_PW + 
     '@node-rest-shard-00-00-f8iyk.mongodb.net:27017,node-rest-shard-00-01-f8iyk.mongodb.net:27017,node-rest-shard-00-02-f8iyk.mongodb.net:27017/test?ssl=true&replicaSet=node-rest-shard-0&authSource=admin&retryWrites=true',
     {
         useNewUrlParser: true
     }
-);
+);*/
+mongoose.connect('mongodb://admin:admin@localhost:27017/node-rest-shop?authSource=admin',
+    {
+        useNewUrlParser: true
+    });
 mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'));
