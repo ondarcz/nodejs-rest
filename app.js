@@ -22,6 +22,7 @@ mongoose.connect('mongodb://admin:admin@localhost:27017/node-rest-shop?authSourc
 mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'));
+app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
