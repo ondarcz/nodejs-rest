@@ -18,6 +18,7 @@ mongoose.connect(
 );*/
 mongoose.connect('mongodb://admin:admin@localhost:27017/node-rest-shop?authSource=admin',
     {
+        useCreateIndex: true,
         useNewUrlParser: true
     });
 mongoose.Promise = global.Promise;
